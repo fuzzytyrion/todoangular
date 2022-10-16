@@ -52,7 +52,7 @@ public class TodosController : ControllerBase
     [HttpGet]
     public ActionResult<List<Todo>> GetTodos()
     {
-        var todos = _context.Todos.ToList();
+        var todos = _context.Todos.Where(t => t.Completed == false).ToList();
 
         return todos;
     }
