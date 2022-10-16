@@ -1,0 +1,8 @@
+<div>
+    <button type="button" (click)="get()">Refresh todos</button>
+    <ul>
+        <li *ngFor="let todo of todos">
+            <p>{{todo.name}}</p>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,5 @@
+<div>
+    <label for="new-todo">Todo: </label>
+    <input type="text" id="new-todo" #todoName />
+    <button type="button" (click)="add(todoName.value)">Add todo</button>
+</div>
