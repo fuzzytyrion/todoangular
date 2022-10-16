@@ -3,6 +3,7 @@
     <ul>
         <li *ngFor="let todo of todos">
             <p>{{todo.name}}</p>
+            <button type="button" (click)="complete(todo)">Complete todo</button>
         </li>
     </ul>
 </div>

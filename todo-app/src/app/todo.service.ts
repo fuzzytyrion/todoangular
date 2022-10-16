@@ -27,4 +27,11 @@ export class TodoService {
     console.log('get service');
     return this.http.get<Todo[]>(this.todoUrl);
   }
+
+  putTodos(todo: Todo): void {
+    console.log('put service');
+    this.http.put<Todo>(this.todoUrl + '/' + todo.id, todo, this.httpOptions).subscribe(data => {
+      console.log('put happened');
+    });
+  }
 }

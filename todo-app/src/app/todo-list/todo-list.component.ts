@@ -26,4 +26,10 @@ export class TodoListComponent implements OnInit {
         this.todos = todos;
       });
   }
+
+  complete(todo: Todo): void {
+    console.log('put chorble');
+    todo.completed = true;
+    this.todoService.putTodos(todo);
+  }
 }
